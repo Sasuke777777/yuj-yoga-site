@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './yogachat.css';
+import './YogaChat.css';
 
 export default function YogaChat() {
   const [messages, setMessages] = useState([
