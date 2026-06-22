@@ -4,7 +4,7 @@ import hero from './assets/header.png';
 import momImg from './assets/instructor.png.jpeg';
 import p1 from './assets/p1.png';
 import p2 from './assets/p2.png';
-import YogaChat from './components/YogaChat';
+import YogaChat from './components/yogachat';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
