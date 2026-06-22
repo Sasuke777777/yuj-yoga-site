@@ -146,14 +146,14 @@ function App() {
             </div>
           </section>
 
-          <section id="testimonials" className="testimonials-section">
+                    <section id="testimonials" className="testimonials-section">
             <div className="testimonials-header">
               <h2>Student Experiences</h2>
               <p>Real stories from individuals who transformed their health through our 1-on-1 private guidance.</p>
             </div>
 
             <div className="slider-wrapper">
-              <button className="slider-arrow prev" onClick={handlePrev}>‹</button>
+              <button className="slider-arrow prev" onClick={(e) => handlePrev(e)}>‹</button>
               
               <div className="testimonial-row-card">
                 <div className="client-avatar-box">
@@ -165,14 +165,14 @@ function App() {
                 </div>
               </div>
 
-              <button className="slider-arrow next" onClick={handleNext}>›</button>
+              <button className="slider-arrow next" onClick={(e) => handleNext(e)}>›</button>
             </div>
           </section>
         </>
       )}
-
     </div>
   );
 }
+
 
 export default App;
