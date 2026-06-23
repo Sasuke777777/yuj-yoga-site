@@ -4,6 +4,7 @@ import hero from './assets/header.png';
 import momImg from './assets/instructor.png.jpeg';
 import p1 from './assets/p1.png';
 import p2 from './assets/p2.png';
+import p3 from './assets/p3.jpg';
 import YogaChat from './components/yogachat';
 
 function App() {
@@ -22,6 +23,11 @@ function App() {
       text: "I have had the privilege of learning yoga under her guidance for the past seven years and it has been a truly transformative journey. Her expertise in teaching asanas, combined with her insightful approach to meditation, has helped me develop both physical strength and mental clarity.What sets her apart is her holistic approach to wellness. Beyond yoga practice, she provides valuable guidance on nutrition and healthy eating habits, helping her students embrace a balanced lifestyle. Her dedication to teaching is very inspiring. Highly recommend her for anyone looking to transform through a healthier lifestyle.",
       avatar: p2
     },
+    {
+      name: "Akhilesh",
+      text: "I have been practicing yoga with Vidya madam for 3 years now, and the impact on my health has been incredible. Turning 40, I was struggling with persistent, worrying back pain that limited my daily life. Today, my back feels perfect. I can lift heavy objects without a second thought or any fear of throwing my back out,What makes her truly exceptional is her deep, almost intuitive understanding of the human body. If I ever show up with a muscle lock, tightness, or specific pain, I just have to tell her. She knows exactly which adjustments or poses to make, and voila—instant relief. I was so impressed by my results that I even convinced my wife to join her classes too (though in a completely separate session, because a guy still needs his own quiet time!)",
+      avatar: p3
+    }
   ];
 
   const handleNext = () => {
