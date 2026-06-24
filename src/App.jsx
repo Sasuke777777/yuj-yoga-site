@@ -41,6 +41,10 @@ function App() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
