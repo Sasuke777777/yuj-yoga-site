@@ -5,7 +5,9 @@ import momImg from './assets/instructor.png.jpeg';
 import p1 from './assets/p1.png';
 import p2 from './assets/p2.png';
 import p3 from './assets/p3.jpg';
+import p4 from './assets/p4.png';
 import YogaChat from './components/yogachat';
+import AIGuru from './components/AIGuru';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,12 +29,13 @@ function App() {
       name: "Akhilesh",
       text: "I have been practicing yoga with Vidya madam for 3 years now, and the impact on my health has been incredible. Turning 40, I was struggling with persistent, worrying back pain that limited my daily life. Today, my back feels perfect. I can lift heavy objects without a second thought or any fear of throwing my back out,What makes her truly exceptional is her deep, almost intuitive understanding of the human body. If I ever show up with a muscle lock, tightness, or specific pain, I just have to tell her. She knows exactly which adjustments or poses to make, and voila—instant relief. I was so impressed by my results that I even convinced my wife to join her classes too (though in a completely separate session, because a guy still needs his own quiet time!)",
       avatar: p3
+    },
+    {
+      name: "Suchitra",
+      text: "I have be1en attending Vidya's yoga classes for the past four years. I initially joined her group classes, but there was a time when even completing 12 Surya Namaskars was a challenge because of severe knee pain. I was on the verge of quitting when Vidya encouraged me to join her one-on-one sessions.Through her personalized approach, she carefully worked on every area where I faced difficulties. Over time, my knee strength improved significantly, and today I am able to perform asanas with much greater ease and confidence.Vidya is an exceptional teacher who truly understands each student's body and limitations. She tailors her instruction accordingly and provides the right exercises and guidance to help achieve steady progress. Her dedication, patience, and expertise have made a remarkable difference in my fitness and overall well-being",
+      avatar: p4
     }
   ];
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
@@ -41,10 +44,16 @@ function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
-    }, 4000);
+    }, 12000);
 
     return () => clearInterval(timer);
   }, [currentIndex]);
+
+  useEffect(() => {
+    const openHandler = () => setCurrentPage('chat');
+    window.addEventListener('openAiGuru', openHandler);
+    return () => window.removeEventListener('openAiGuru', openHandler);
+  }, []);
 
   return (
     <div className="app-container">
@@ -176,6 +185,7 @@ function App() {
           </section>
         </>
       )}
+      <AIGuru />
     </div>
   );
 }
